@@ -24,5 +24,14 @@ function saveRecord(data) {
 }
 //create a fdunction taht checks the database amd if there is data run on success
 function checkDatabase(event) {
+  //what in the left tit am i doinnnggg
+  const transaction = db.transaction('pending', "readwrite");
+  const store = transaction.objectStore('pending'); 
+
+  const all = store.getAll();
   
+  all.onsuccess = function() {
+    resolve(all.result);
+  };
+
 }
