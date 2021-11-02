@@ -9,10 +9,20 @@ request.onupgradeneeded = function(e) {
     db.createObjectStore('pending', {autoIncrement: true});
   };
 
-  //onerror
+//onerror
+request.onerror = function(e) {
+  //to get spefic err
+  console.log("error"); 
+}
 
-  
+//create fucntions to save the records that are cached
+function saveRecord(data) {
+  const transaction = db.transaction('pending', "readwrite");
+  const store = transaction.objectStore('pending'); 
 
-  //create fucntions to save the records that are cached
-
+  store.add(data);
+}
 //create a fdunction taht checks the database amd if there is data run on success
+function checkDatabase(event) {
+  
+}
