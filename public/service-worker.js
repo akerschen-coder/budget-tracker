@@ -6,7 +6,8 @@ const FILES_TO_CACHE = [
     '/manifest.json',
     '/styles.css',
     '/index.js',
-    'https://cdn.jsdelivr.net/npm/chart.js@2.8.0'
+    'https://cdn.jsdelivr.net/npm/chart.js@2.8.0',
+    '/indexedDB.js'
 ];
 
 const PRECACHE = 'precache-v1';
